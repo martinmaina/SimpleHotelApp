@@ -4,10 +4,10 @@ __pycache__/
 *$py.class
 
 #Fonts
-fonts/
+/static/fonts/*
 
 #Images
-Images/*
+/static/Images/*
 *.jpg
 # C extensions
 *.so
