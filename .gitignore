@@ -9,6 +9,9 @@ static/fonts/
 #Images
 static/Images/
 *.jpg
+
+#templates
+templates/
 # C extensions
 *.so
 
