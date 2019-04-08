@@ -10,15 +10,15 @@ database = sqlite3.connect('message.db')
 
 @app.route('/index')
 def index():
-    return render_template('index.html', title="Welcome | BT HOTEL" )
+    return render_template('index.html', title="Mukawa Wa Maina | karibu" )
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title="About | BT HOTEL")
+    return render_template('about.html', title="Mukawa Wa Maina | menya maingi")
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', title="Contact | BT HOTEL")
+    return render_template('contact.html', title="Mukawa Wa Maina | araniria naithui")
 
 
 
@@ -28,7 +28,7 @@ def message_us():
     if request.method == 'POST':
         try:
                 mm.addVerse(request.form['name'], request.form['email'], request.form['message'])
-                messa = 'Thank you for Your feedback. '
+                messa = 'Thank you for your feedback ' + request.form['name'].capitalize()+'.'
         except sqlite3.IntegrityError:
                 pass
         
